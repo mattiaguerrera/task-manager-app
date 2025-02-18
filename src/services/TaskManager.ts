@@ -51,14 +51,17 @@ export class TaskManager {
 
       const toggleButton = document.createElement("button");
       toggleButton.textContent =
+        task.status === TaskStatus.Completed ? "✗" : "✓";
+      toggleButton.className =
         task.status === TaskStatus.Completed
-          ? "Segna come incompleta"
-          : "Segna come completa";
+          ? "toggle-btn success"
+          : "toggle-btn warn";
       toggleButton.onclick = () => this.toggleTaskCompletion(task.id);
 
       const deleteButton = document.createElement("button");
       deleteButton.textContent = "Rimuovi";
       deleteButton.onclick = () => this.removeTask(task.id);
+      deleteButton.className = "delete";
 
       taskElement.appendChild(taskName);
       taskElement.appendChild(toggleButton);

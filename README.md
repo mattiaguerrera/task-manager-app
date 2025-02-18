@@ -109,3 +109,6 @@ npx tsc
 npx sass src/style.scss dist/style.css
 npm run build
 ```
+
+
+### LANCIA IL PROGETTO SU FIREFOX

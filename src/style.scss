@@ -63,11 +63,24 @@ body {
   }
   
   li button {
-    background-color: #f44336;
     border: none;
     color: white;
     padding: 5px 10px;
     cursor: pointer;
+
+    &.delete {
+      background-color: #bb2124;
+    }
+
+    &.toggle-btn {
+      margin-right: 5px;
+      &.success {
+        background-color: #22bb33;
+      }
+      &.warn {
+        background-color: #f0ad4e;
+      }
+    }
   }
   
   li button:hover {
